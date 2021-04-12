@@ -1,16 +1,20 @@
 import React from 'react'
-import { Logo } from '../Logo/Index'
+
 import { Menu } from '../Menu/Index'
+import { Title } from './components/Title'
 
 export const Header = () => {
   const blockEl = 'edg__header'
 
   return (
     <header className={blockEl}>
-      <div className={`${blockEl}__container wrapper`}>
-        <Logo className={`${blockEl}__container-logo`} />
-        <Menu />
-      </div>
+      <section className={`${blockEl}__container`}>
+        <div className={`${blockEl}__background`}></div>
+        <div className={`${blockEl}__container wrapper`}>
+          <Menu className={`${blockEl}__menu`} />
+          <Title className={`${blockEl}-title`} text='Edgar Campos' />
+        </div>
+      </section>
     </header>
   )
 }

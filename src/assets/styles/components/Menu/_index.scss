@@ -1,0 +1,72 @@
+&__menu {
+	align-items: center;
+	display: flex;
+
+	&__burguer {
+		display: none;
+		text-align: center;
+		width: 50px;
+
+		&-icon {
+			color: $white;
+			font-size: 2em;
+
+			transition: 0.3s ease;
+		}
+
+		&-icon--active {
+			color: $blue-5c6;
+		}
+
+		@media only screen and (max-width: $width-medium) {
+			display: block;
+		}
+	}
+
+	&__container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+
+		&-item {
+			cursor: pointer;
+			flex: 1 1 15%;
+			padding: 10px;
+
+			a {
+				color: $white;
+				font-size: .8em;
+				text-decoration: none;
+				letter-spacing: 2px;
+			}
+
+			&:hover {
+				background-color: $white;
+
+				a {
+					color: $blue-1d2;
+					font-weight: 500;
+				}
+
+				transition: 0.5s ease;
+			}
+
+			@media only screen and (max-width: $width-medium) {
+				text-align: right;
+				width: 100%;
+			}
+		}
+
+		@media only screen and (max-width: $width-medium) {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			text-align: right;
+			top: 50px;
+		}
+	}
+
+	&__container--active {
+		display: flex;
+	}
+}
