@@ -1,0 +1,8 @@
+.wrapper{
+  margin: 0 auto;
+  width: $responsiveWrapper;
+
+  @media only screen and (max-width: $responsiveWrapper) {
+      width: 95%;
+  }
+}

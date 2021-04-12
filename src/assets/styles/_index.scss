@@ -1,0 +1,12 @@
+@import "./base/settings";
+@import "./base/colors";
+@import "./base/reset";
+@import "./base/shared";
+@import "./base/buttons";
+@import "./base/fonts";
+
+.edg {
+	@import "./components/Header/";
+	@import "./components/Menu/";
+	@import "./components/Logo/";
+}

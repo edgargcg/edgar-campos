@@ -1,22 +1,24 @@
-import React from 'react'
+import React from "react";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect,
 } from "react-router-dom";
 
-import { Home } from '../containers/Home/Index'
+import { Home } from "../containers/Home/Index";
+import { Repositories } from "../containers/Repositories/Index";
 
 export const AppRouter = () => {
-    return (
-        <Router>
-            <div>
-                <Switch>
-                    <Route exact path="/home" component={Home} />
-                    <Redirect to="/home" />
-                </Switch>
-            </div>
-        </Router>
-    )
-}
+	return (
+		<Router>
+			<>
+				<Switch>
+					<Route path="/home" component={Home} />
+					<Route path="/repos" component={Repositories} />
+					<Redirect to="/home" />
+				</Switch>
+			</>
+		</Router>
+	);
+};

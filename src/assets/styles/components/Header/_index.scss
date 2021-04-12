@@ -1,0 +1,21 @@
+&__header {
+	background: $blue-1d2;
+	height: 70px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	&__container {
+		align-items: center;
+		display: flex;
+		height: 100%;
+
+		&-logo{
+			// background: url(./assets/images/image.svg);
+		}
+
+		&-title {
+			color: $white;
+		}
+	}
+}
