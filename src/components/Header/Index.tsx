@@ -10,9 +10,13 @@ export const Header = () => {
     <header className={blockEl}>
       <section className={`${blockEl}__container`}>
         <div className={`${blockEl}__background`}></div>
-        <div className={`${blockEl}__container wrapper`}>
+        <div className={`${blockEl}__content wrapper`}>
           <Menu className={`${blockEl}__menu`} />
-          <Title className={`${blockEl}-title`} text='Edgar Campos' />
+          <Title 
+            className={`${blockEl}-title`} 
+            description='.NET FullStack Dev' 
+            name='Edgar Campos' 
+          />
         </div>
       </section>
     </header>

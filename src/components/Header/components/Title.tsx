@@ -1,16 +1,22 @@
 import React from 'react'
 
-interface Props{
+interface Props {
   className: string
-  text: string
+  description: string
+  name: string
 }
 
 export const Title = (props: Props) => {
-  const { className, text } = props
+  const { className, description, name } = props
 
   return (
-    <h1 className={className}>
-      {text}
-    </h1>
+    <div className={className}>
+      <h1 className={`${className}-name`}>
+        {name}
+      </h1>
+      <h5 className={`${className}-description`}>
+        {description}
+      </h5>
+    </div>
   )
 }
