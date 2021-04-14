@@ -42,5 +42,10 @@
 		strong{
 			color: $gray-434;
 		}
+
+		@media only screen and (max-width: $width-small){
+			line-height: 22px;
+			margin-top: 0px;
+		}
 	}
 }

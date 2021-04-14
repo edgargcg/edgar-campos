@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { Header } from '../../components/Header/Index'
-import { ProfilePicture } from '../../components/ProfilePicture'
+import { Profile } from '../../components/Profile/'
 
 export const Home = () => {
     return (
         <>
             <Header />
-            <ProfilePicture />
+            <Profile />
         </>        
     )
 }

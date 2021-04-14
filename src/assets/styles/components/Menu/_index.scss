@@ -35,7 +35,7 @@
 
 			a {
 				color: $white;
-				font-size: .8em;
+				font-size: 0.8em;
 				text-decoration: none;
 				letter-spacing: 2px;
 			}
@@ -52,17 +52,23 @@
 			}
 
 			@media only screen and (max-width: $width-medium) {
+				flex: 0;
+				height: 30px;
+				padding: 10px;
 				text-align: right;
 				width: 100%;
 			}
 		}
 
 		@media only screen and (max-width: $width-medium) {
+			background: $blue-1d2;
 			display: none;
 			flex-direction: column;
+			height: 100vh;
 			position: absolute;
 			text-align: right;
 			top: 50px;
+			z-index: 2;
 		}
 	}
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Picture } from './components/Picture'
 import { Resume } from './components/Resume'
 
-export const ProfilePicture = () => {
+export const Profile = () => {
   const blockEl = 'edg__profile'
   return (
     <div id="intro" className={blockEl}>
