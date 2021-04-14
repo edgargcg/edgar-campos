@@ -7,15 +7,15 @@ export const Header = () => {
   const blockEl = 'edg__header'
 
   return (
-    <header className={blockEl}>
+    <header id="intro" className={blockEl}>
       <section className={`${blockEl}__container`}>
+        <Menu className={`${blockEl}__menu`} />
         <div className={`${blockEl}__background`}></div>
         <div className={`${blockEl}__content wrapper`}>
-          <Menu className={`${blockEl}__menu`} />
-          <Title 
-            className={`${blockEl}-title`} 
-            description='.NET FullStack Dev' 
-            name='Edgar Campos' 
+          <Title
+            className={`${blockEl}-title`}
+            description='.NET FullStack Dev'
+            name='Edgar Campos'
           />
         </div>
       </section>

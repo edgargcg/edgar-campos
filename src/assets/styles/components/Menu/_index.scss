@@ -1,6 +1,8 @@
 &__menu {
 	align-items: center;
 	display: flex;
+	position: absolute;
+	z-index: 5;
 
 	&__burguer {
 		display: none;
@@ -10,12 +12,13 @@
 		&-icon {
 			color: $white;
 			font-size: 2em;
-
-			transition: 0.3s ease;
 		}
 
 		&-icon--active {
-			color: $blue-5c6;
+			position: fixed;
+			top: 10px;
+			right: 15px;
+			z-index: 6;
 		}
 
 		@media only screen and (max-width: $width-medium) {
@@ -45,7 +48,6 @@
 
 				a {
 					color: $blue-1d2;
-					font-weight: 500;
 				}
 
 				transition: 0.5s ease;
@@ -54,6 +56,7 @@
 			@media only screen and (max-width: $width-medium) {
 				flex: 0;
 				height: 30px;
+				margin-bottom: 10px;
 				padding: 10px;
 				text-align: right;
 				width: 100%;
@@ -64,15 +67,19 @@
 			background: $blue-1d2;
 			display: none;
 			flex-direction: column;
-			height: 100vh;
+			height: 100%;
+			min-height: 100vh;
+			padding: 20px;
+			padding-top: 50px;
 			position: absolute;
 			text-align: right;
-			top: 50px;
+			top: 0px;
 			z-index: 2;
 		}
 	}
 
 	&__container--active {
 		display: flex;
+		position: fixed;
 	}
 }
