@@ -34,6 +34,7 @@
 
 	&__resume{
 		color: $blue-1d2;
+		font-size: 1.25em;
 		line-height: 30px;
 		margin-top: 30px;
 		padding: 0 2%;
@@ -44,6 +45,7 @@
 		}
 
 		@media only screen and (max-width: $width-small){
+			font-size: 1em;
 			line-height: 22px;
 			margin-top: 0px;
 		}
