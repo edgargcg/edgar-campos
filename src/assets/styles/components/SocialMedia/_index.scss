@@ -1,0 +1,27 @@
+&__social-media {
+	align-items: center;
+	display: flex;
+	height: 100px;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 0 auto;
+		padding: 0;
+
+		&-item {
+			font-size: 3rem;
+
+			a {
+				color: $gray-434;
+				text-decoration: none;
+				transition: 0.1s ease;
+
+				&:hover {
+					color: $blue-5c6;
+				}
+			}
+		}
+	}
+}

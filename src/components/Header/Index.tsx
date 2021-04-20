@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Menu } from '../Menu/Index'
+import { Menu } from '../Menu/'
 import { Title } from './components/Title'
 
 export const Header = () => {
