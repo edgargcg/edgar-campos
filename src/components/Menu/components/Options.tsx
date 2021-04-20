@@ -1,5 +1,7 @@
-import classNames from 'classnames';
 import React from 'react'
+import classNames from 'classnames';
+import { Link } from "react-scroll";
+
 import { MenuOption } from '../../../interfaces/MenuOption';
 
 interface Props {
@@ -21,9 +23,13 @@ export const Options = (props: Props) => {
         key={`menu-option-${id}`}
         className={`${className}__container-item`}
       >
-        <a href={`#${id}`}>
+        <Link to={id}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
           {name}
-        </a>
+        </Link>
       </li>
     )
   )

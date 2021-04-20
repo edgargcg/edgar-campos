@@ -35,6 +35,10 @@
 		height: 50px;
 		justify-content: flex-end;
 		width: 100%;
+
+		@media only screen and (min-width: $width-large) {
+			width: 95%;
+		}
 	}
 
 	&-title {

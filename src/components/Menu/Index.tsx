@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import useScreenSize from 'use-screen-size'
+import { animateScroll as scroll } from "react-scroll";
+
 import { Options } from './components/Options'
 import { BurguerButton } from './components/BurguerButton';
+import { BackToTop } from './components/BackToTop';
 
 import { getMenuOptions } from '../../getters/getMenuOptions'
 
@@ -13,6 +16,7 @@ export const Menu = (props: Props) => {
   const { className } = props
 
   const [showMenu, setShowMenu] = useState(false);
+  const [classNameMenu, setClassNameMenu] = useState('')
 
   const size = useScreenSize()
   const blockEl = 'edg__menu'
@@ -21,6 +25,29 @@ export const Menu = (props: Props) => {
   const onClickMenuMobile = () => {
     setShowMenu(!showMenu);
   }
+
+  const onClickBackTop = () => {
+    scroll.scrollToTop();
+  }
+
+  const onScroll = () => {
+    const scrollPosition =
+      document.body.scrollTop || document.documentElement.scrollTop
+
+    setClassNameMenu(
+      scrollPosition > 1
+        ? `${blockEl}--fixed`
+        : ''
+    );
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const { screen } = size;
@@ -31,7 +58,17 @@ export const Menu = (props: Props) => {
   }, [size])
 
   return (
-    <nav className={`${blockEl} ${className}`}>
+    <nav className={`${blockEl} ${className} ${classNameMenu}`}>
+      <h2 className={`${blockEl}__title ${classNameMenu}__title`}>
+        Edgar Campos
+        <small>
+          .NET Fullsatck Dev
+        </small>
+      </h2>
+      <BackToTop
+        className={`${blockEl}__back`}
+        onClick={onClickBackTop}
+      />
       <BurguerButton
         className={`${blockEl}__burguer`}
         active={showMenu}
