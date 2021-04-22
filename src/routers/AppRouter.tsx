@@ -6,7 +6,7 @@ import {
 	Redirect,
 } from "react-router-dom";
 
-import { Home } from "../containers/Home/Index";
+import { Home } from "../containers/Home/";
 import { Repositories } from "../containers/Repositories/Index";
 
 export const AppRouter = () => {
