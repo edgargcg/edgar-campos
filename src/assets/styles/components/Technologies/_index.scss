@@ -20,9 +20,9 @@
 			justify-content: center;
 
 			&-item {
-				border-bottom: 1px solid $gray-e8e;
+				border-bottom: 2px solid $gray-e8e;
 				display: flex;
-				flex: 1 0 48%;
+				flex: 0 0 48%;
 				padding: 50px 1%;
 
 				&__image {
@@ -54,13 +54,47 @@
 
 					&-paragraph {
 						color: $gray-576;
-						font-size: 0.9em;
+						font-size: 1em;
+						
+						@media only screen and (max-width: $width-medium) {
+							font-size: 1.3em;
+						}
 					}
 				}
-			}
 
-			@media only screen and (max-width: $width-medium) {
-				flex-direction: column;
+				@media only screen and (max-width: $width-medium) {
+					flex: 1 100%;
+
+					&:not(:nth-child(-n + 2)) {
+						border: none;
+						margin: 50px 0;
+						padding: 0;
+						flex: 1;
+						flex-direction: column;
+						text-align: center;
+						width: 33%;
+
+						.edg__technologies__container__list-item__image {
+							img {
+								width: 50px !important;
+							}
+						}
+
+						.edg__technologies__container__list-item__description {
+							&-title {
+								font-size: 1em;
+							}
+
+							&-experience {
+								display: none;
+							}
+
+							&-paragraph {
+								display: none;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

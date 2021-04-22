@@ -58,27 +58,29 @@ export const Menu = (props: Props) => {
   }, [size])
 
   return (
-    <nav className={`${blockEl} ${className} ${classNameMenu}`}>
-      <h2 className={`${blockEl}__title ${classNameMenu}__title`}>
-        Edgar Campos
-        <small>
-          .NET Fullsatck Dev
-        </small>
-      </h2>
+    <>
+      <nav className={`${blockEl} ${className} ${classNameMenu}`}>
+        <h2 className={`${blockEl}__title ${classNameMenu}__title`}>
+          Edgar Campos
+          <small>
+            .NET Fullsatck Dev
+          </small>
+        </h2>
+        <BurguerButton
+          className={`${blockEl}__burguer`}
+          active={showMenu}
+          handleClick={onClickMenuMobile}
+        />
+        <Options
+          className={blockEl}
+          active={showMenu}
+          options={options}
+        />
+      </nav>
       <BackToTop
         className={`${blockEl}__back`}
         onClick={onClickBackTop}
       />
-      <BurguerButton
-        className={`${blockEl}__burguer`}
-        active={showMenu}
-        handleClick={onClickMenuMobile}
-      />
-      <Options
-        className={blockEl}
-        active={showMenu}
-        options={options}
-      />
-    </nav>
+    </>
   )
 }
