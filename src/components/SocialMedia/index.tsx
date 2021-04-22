@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getSocialMedia } from '../../getters/getSocialMedia';
-import { IconName, IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const SocialMedia = () => {
   const blockEl = 'edg__social-media';
@@ -9,7 +9,7 @@ export const SocialMedia = () => {
 
   const renderSocialMediaItems = socialMedia.map(
     ({ name, icon, url }) => (
-      <li className={`${blockEl}__list-item`}>
+      <li key={`social-media-icon-${icon}`} className={`${blockEl}__list-item`}>
         <a
           href={url}
           title={name}

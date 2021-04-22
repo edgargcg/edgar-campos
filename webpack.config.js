@@ -64,7 +64,7 @@ module.exports = (env, args) => {
 				react: path.resolve(resolveApp("."), "./node_modules/react"),
 				"react-dom": path.resolve(resolveApp("."), "./node_modules/react-dom"),
 				components: path.resolve(resolveApp("src"), "components"),
-				assets: path.resolve(resolveApp("src"), "assets"),
+				assets: path.resolve(resolveApp("src"), "./assets"),
 			},
 		},
 		plugins: [

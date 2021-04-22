@@ -1,3 +1,15 @@
+
+@keyframes menu__slide__down {
+	0% {
+			opacity: 0;
+			transform: translateY(-100%);
+	} 
+	100% {
+			opacity: 1;
+			transform: translateY(0);
+	} 
+}
+
 &__menu {
 	align-items: center;
 	display: flex;
@@ -10,7 +22,7 @@
 
 	&--fixed {
 		position: absolute;
-
+		
 		&__title {
 			color: $white;
 			display: none;
@@ -27,11 +39,12 @@
 			}
 		}
 
-		@media only screen and (min-width: $width-large) {
+		@media only screen and (min-width: $width-medium) {
 			background-color: $blue-1d2;
 			justify-content: space-between;
 			padding: 10px 5%;
 			position: fixed;
+			animation: menu__slide__down 0.7s;
 		}
 	}
 

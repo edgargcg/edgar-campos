@@ -1,0 +1,33 @@
+&__tabs {
+	height: 95px;
+	width: 100%;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+
+		&-item {
+			border-bottom: 4px solid $gray-e8e;
+			color: $gray-576;
+			flex-grow: 1;
+			font-size: 1.5rem;
+			font-weight: 500;
+			padding: 2rem;
+			text-align: center;
+
+			&--active{
+				color: $blue-037;
+				border-color: $blue-049;
+			}
+
+			&:hover{
+				color: $blue-037;
+				cursor: pointer;
+				border-color: $blue-049;
+			}
+		}
+	}
+}

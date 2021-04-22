@@ -35,7 +35,7 @@ export const Menu = (props: Props) => {
       document.body.scrollTop || document.documentElement.scrollTop
 
     setClassNameMenu(
-      scrollPosition > 1
+      scrollPosition > 190
         ? `${blockEl}--fixed`
         : ''
     );

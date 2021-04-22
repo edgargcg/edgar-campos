@@ -4,7 +4,7 @@ export const getMenuOptions = () => [
 		name: "Intro",
 	},
 	{
-		id: "tec",
+		id: "tech",
 		name: "Tecnologías",
 	},
 	{
