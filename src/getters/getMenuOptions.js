@@ -15,8 +15,4 @@ export const getMenuOptions = () => [
 		id: "repos",
 		name: "Repositorios",
 	},
-	{
-		id: "contact",
-		name: "Contacto",
-	},
 ];

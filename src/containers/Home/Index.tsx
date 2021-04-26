@@ -8,14 +8,14 @@ import { SocialMedia } from '../../components/SocialMedia'
 import { Technologies } from '../../components/Technologies'
 
 export const Home = () => {
-    return (
-        <>
-            <Header />
-            <Profile />
-            <SocialMedia />
-            <Technologies />
-            <Experience />
-            <Repositories />
-        </>        
-    )
+  return (
+    <>
+      <Header />
+      <Profile />
+      <SocialMedia />
+      <Technologies />
+      <Experience />
+      <Repositories />
+    </>
+  )
 }
