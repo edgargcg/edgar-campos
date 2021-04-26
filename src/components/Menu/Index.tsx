@@ -5,22 +5,22 @@ import { animateScroll as scroll } from "react-scroll";
 import { Options } from './components/Options'
 import { BurguerButton } from './components/BurguerButton';
 import { BackToTop } from './components/BackToTop';
-
-import { getMenuOptions } from '../../getters/getMenuOptions'
+import { MenuOption } from '../../interfaces/MenuOption';
 
 interface Props {
   className?: string
+  options: MenuOption[]
 }
 
 export const Menu = (props: Props) => {
-  const { className } = props
+  const { className, options } = props
 
   const [showMenu, setShowMenu] = useState(false);
   const [classNameMenu, setClassNameMenu] = useState('')
 
   const size = useScreenSize()
   const blockEl = 'edg__menu'
-  const options = getMenuOptions();
+
 
   const onClickMenuMobile = () => {
     setShowMenu(!showMenu);

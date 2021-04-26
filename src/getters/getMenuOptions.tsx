@@ -1,4 +1,6 @@
-export const getMenuOptions = () => [
+import { MenuOption } from "../interfaces/MenuOption";
+
+export const getMenuOptions = (): MenuOption[] => [
 	{
 		id: "intro",
 		name: "Intro",

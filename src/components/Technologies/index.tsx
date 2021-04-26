@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import { TechnologyCategory } from '../../interfaces/TechnologyCategory'
 import { Tabs } from '../Tabs'
 import { Section } from './components/Section'
-import { getTechnologies } from '../../getters/getTechnologies'
 
-export const Technologies = () => {
+interface Props{
+  technologies: TechnologyCategory[]
+}
+
+export const Technologies = (props: Props) => {
+  const { technologies } = props
+
   const [tab, setTab] = useState('')
-
   let tabs: { id: string, name: string }[] = [];
   const blockEl = 'edg__technologies'
-  const technologies = getTechnologies()
-
+  
   useEffect(() => {
     const { type } = technologies[0]
     setTab(type)

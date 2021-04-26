@@ -1,4 +1,6 @@
-export const getTechnologies = () => [
+import { TechnologyCategory } from "../interfaces/TechnologyCategory";
+
+export const getTechnologies = (): TechnologyCategory[] => [
   {
     name: 'FrontEnd',
     type: 'frontend',
