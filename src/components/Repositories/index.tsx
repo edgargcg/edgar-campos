@@ -1,10 +1,14 @@
 import React from 'react'
-import { getRepositories } from '../../getters/getRepositories'
+import { Repository } from '../../interfaces/Repository'
 import { RepositoryCard } from '../RepositoryCard'
 
-export const Repositories = () => {
+interface Props{
+  repositories: Repository[]
+}
+
+export const Repositories = (props: Props) => {
+  const { repositories } = props
   const blockEl = 'edg__repositories'
-  const repositories = getRepositories()
 
   const renderRepositories = repositories.map(
     (repository, index) => (
