@@ -1,4 +1,6 @@
-export const getExperience = () => [
+import { Experience } from "../interfaces/Experience";
+
+export const getExperience = (): Experience[] => [
   {
     name: 'UdeC',
     position: '.NET Dev'

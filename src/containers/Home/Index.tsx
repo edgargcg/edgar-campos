@@ -11,12 +11,14 @@ import { Footer } from '../../components/Footer'
 import { getMenuOptions } from '../../getters/getMenuOptions'
 import { getSocialMedia } from '../../getters/getSocialMedia'
 import { getTechnologies } from '../../getters/getTechnologies'
+import { getExperience } from '../../getters/getExperience'
 
 export const Home = () => {
 
   const options = getMenuOptions();
   const socialMedia = getSocialMedia();
   const technologies = getTechnologies()
+  const experience = getExperience();
   
   const resume =(
     <>
@@ -39,7 +41,7 @@ export const Home = () => {
       <Profile resume={resume} />
       <SocialMedia socialMedia={socialMedia} />
       <Technologies technologies={technologies} />
-      <Experience />
+      <Experience experience={experience} />
       <Repositories />
       <Footer />
     </>

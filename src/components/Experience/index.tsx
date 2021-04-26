@@ -1,9 +1,13 @@
 import React from 'react'
-import { getExperience } from '../../getters/getExperience'
+import { Experience as ExperienceInterface } from '../../interfaces/Experience'
 
-export const Experience = () => {
+interface Props{
+  experience: ExperienceInterface[]
+}
+
+export const Experience = (props: Props) => {
+  const { experience } = props
   const blockEl = 'edg__experience'
-  const experience = getExperience();
 
   const renderExperience = experience.map(
     ({ name, position }, index) => (
