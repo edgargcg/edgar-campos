@@ -10,7 +10,7 @@ module.exports = (env, args) => {
 		mode: args.mode,
 		entry: "./src/index.tsx",
 		output: {
-			path: path.resolve(__dirname, "dist"),
+			path: path.resolve(__dirname, "build"),
 			filename: "build.js",
 		},
 		devServer: {
