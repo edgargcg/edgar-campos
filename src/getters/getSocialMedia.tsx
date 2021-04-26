@@ -1,4 +1,6 @@
-export const getSocialMedia = () => [
+import { SocialMedia } from "../interfaces/SocialMedia";
+
+export const getSocialMedia = (): SocialMedia[] => [
   {
     name: 'linkedIn',
     icon: ['fab', 'linkedin'],
