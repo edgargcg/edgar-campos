@@ -1,16 +1,19 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
+	Router,
 	Switch,
 	Route,
 	Redirect,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
-import { Home } from "../containers/Home/";
+import { Home } from "../containers/Home";
+
+const history = createBrowserHistory();
 
 export const AppRouter = () => {
 	return (
-		<Router>
+		<Router history={history} >
 			<>
 				<Switch>
 					<Route path="/home" component={Home} />
