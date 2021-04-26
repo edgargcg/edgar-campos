@@ -7,14 +7,14 @@ export const getMenuOptions = (): MenuOption[] => [
 	},
 	{
 		id: "tech",
-		name: "Tecnologías",
+		name: "Skills",
 	},
 	{
 		id: "exp",
-		name: "Experiencia",
+		name: "Experience",
 	},
 	{
 		id: "repos",
-		name: "Repositorios",
+		name: "Repositories",
 	},
 ];
