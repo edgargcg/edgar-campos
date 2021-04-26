@@ -9,6 +9,7 @@
 .edg {
 	// ui
 	@import "./components/Tabs/";
+	@import "./components/RepositoryCard/";
 
 	// components
 	@import "./components/Header/";
@@ -17,4 +18,5 @@
 	@import "./components/SocialMedia/";
 	@import "./components/Technologies/";
 	@import "./components/Experience/";
+	@import "./components/Repositories/";
 }

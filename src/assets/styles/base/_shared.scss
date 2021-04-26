@@ -6,3 +6,18 @@
       width: 95%;
   }
 }
+
+.border{
+  border-bottom: 2px solid$pink-e20;
+  padding: 10px 1%;
+  width: 98%;
+}
+
+.stretch-link{
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}

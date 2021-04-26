@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 
 import { Home } from "../containers/Home/";
-import { Repositories } from "../containers/Repositories/Index";
 
 export const AppRouter = () => {
 	return (
@@ -15,7 +14,6 @@ export const AppRouter = () => {
 			<>
 				<Switch>
 					<Route path="/home" component={Home} />
-					<Route path="/repos" component={Repositories} />
 					<Redirect to="/home" />
 				</Switch>
 			</>
