@@ -1,5 +1,6 @@
 import React from 'react'
 import { Experience } from '../../components/Experience'
+import { Footer } from '../../components/Footer'
 
 import { Header } from '../../components/Header'
 import { Profile } from '../../components/Profile'
@@ -16,6 +17,7 @@ export const Home = () => {
       <Technologies />
       <Experience />
       <Repositories />
+      <Footer />
     </>
   )
 }
