@@ -2,7 +2,7 @@
 	"name": "edgar-campos",
 	"homepage": "https://github.com/edgargcg/edgar-campos/",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Edgar Campos",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "webpack serve --open chrome  --mode development --config  webpack.config.js",
